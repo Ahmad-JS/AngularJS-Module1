@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="module1AssignmentApp">
+<head>
+    <title>Module 1 Assignment</title>
+    <script src="angular.min.js"></script>  
+    <script src="app.js"></script>
+
+</head>
+<body>
+    <div ng-controller="module1AssignController">
+    <h2>Module 1 Assignmesnt</h2>
+    <h3>Checks if the input data has 3 items to input word enjoy<br> if more than 3 items, it will show too much and if no value added <br>then input please enter input</h3>
+    <input type="text" ng-model="inputItem">
+    <br>
+    <br>
+    <button ng-click="checkItems()">Check if too much</button>
+    <br>
+    <br>
+    <h1 id="resultType">{{inputResult}}</h1>
+    </div>
+</body>
+</html>
