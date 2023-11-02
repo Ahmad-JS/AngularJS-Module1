@@ -13,16 +13,16 @@
             console.log(splitItem.length);
             if(splitItem.length > 3)
             {
-                document.getElementById("resultType").style.color = "#ff0000";
+                document.getElementById("resultType").style.color = "#F00";
                 $scope.inputResult = "Too much!";
             }
             else if($scope.inputItem == "")
             {
-                document.getElementById("resultType").style.color = "#000000";
+                document.getElementById("resultType").style.color = "#F00";
                 $scope.inputResult = "Please enter data first";
             }
             else{
-                document.getElementById("resultType").style.color = "#00FF00";
+                document.getElementById("resultType").style.color = "#0F0";
                 $scope.inputResult = "Enjoy";
             }
         }
