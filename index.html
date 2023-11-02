@@ -1,22 +1,74 @@
 <!DOCTYPE html>
 <html ng-app="module1AssignmentApp">
 <head>
-    <title>Module 1 Assignment</title>
+    <title>Lunch Checker</title>
     <script src="angular.min.js"></script>  
     <script src="app.js"></script>
 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #4caf50;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .message {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <div ng-controller="module1AssignController">
-    <h2>Module 1 Assignmesnt</h2>
-    <h3>Checks if the input data has 3 items to input word enjoy<br> if more than 3 items, it will show too much and if no value added <br>then input please enter input</h3>
-    <input type="text" ng-model="inputItem">
-    <br>
-    <br>
-    <button ng-click="checkItems()">Check if too much</button>
-    <br>
-    <br>
-    <h1 id="resultType">{{inputResult}}</h1>
+    <div ng-controller="module1AssignController" class="container">
+        <h1>Lunch Checker</h1>
+        <div class="form-group">
+            <input dir="auto" type="text"
+                placeholder="List comma separated dishes you usually have for lunch"
+                class="form-control" ng-model="inputItem">
+        </div>
+        <div class="form-group">
+            <button class="btn" ng-click="checkItems()">Check if too Much</button>
+        </div>
+        <div class="form-group message">
+            <h1 id="resultType">{{inputResult}}</h1>
+        </div>
     </div>
 </body>
 </html>
